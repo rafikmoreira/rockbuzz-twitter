@@ -1,0 +1,28 @@
+<template>
+  <li class="my-2">
+    <a href="#">#{{ text }}</a>
+  </li>
+</template>
+
+<script lang="ts">
+import Vue from 'vue'
+export default Vue.extend({
+  name: 'TrendItem',
+  props: {
+    text: {
+      required: true,
+      default: '',
+      type: String,
+    },
+  },
+})
+</script>
+
+<style lang="scss" scoped>
+a {
+  transition: 0.4s;
+  &:hover {
+    color: #222;
+  }
+}
+</style>

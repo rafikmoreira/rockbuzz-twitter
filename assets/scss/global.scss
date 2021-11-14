@@ -1,0 +1,12 @@
+body {
+  background-color: #e1e1e1;
+}
+
+.borda {
+  // border: 2px solid #b3b3b3;
+  border-radius: convertPxToRem(10);
+}
+
+li {
+  list-style: none;
+}
