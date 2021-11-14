@@ -28,6 +28,7 @@ export default {
     // https://go.nuxtjs.dev/typescript
     '@nuxt/typescript-build',
     '@nuxtjs/tailwindcss',
+    '@nuxtjs/pwa',
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
@@ -39,6 +40,15 @@ export default {
       plugins: {
         'postcss-custom-properties': false,
       },
+    },
+  },
+  pwa: {
+    manifest: {
+      name: 'Twitter BR',
+      useWebmanifestExtension: false,
+      lang: 'pt-br',
+      icons: [],
+      description: 'Uma cópia do Twitter BR - Desafio front-end',
     },
   },
 }
