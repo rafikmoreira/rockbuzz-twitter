@@ -1,6 +1,6 @@
 <template>
   <ul class="status-item mx-4">
-    <li>{{ text }}</li>
+    <li v-text="text"></li>
     <li>
       {{
         new Intl.NumberFormat('pt-BR', {

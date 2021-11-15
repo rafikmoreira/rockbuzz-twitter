@@ -1,5 +1,5 @@
 <template>
-  <div class="tweets-wrapper borda mt-5 lg:mt-0">
+  <div class="tweets-wrapper borda mt-5 md:mt-0">
     <div class="px-2 pt-2">
       <Title text="Tweets " />
     </div>
@@ -35,18 +35,19 @@ type TweetType = {
 export default Vue.extend({
   name: 'TweetsComponent',
   components: { Title, Tweet },
-  data: () => {
-    return {
-      tweets: [] as TweetType[],
-    }
-  },
-
   async fetch() {
-    this.tweets = await fetch(
+    const payload = await fetch(
       'http://localhost:3000/api/last10TweetsFollowing'
     ).then((r) => r.json())
+
+    this.$store.commit('tweets/loadTweets', { payload })
   },
   fetchOnServer: false,
+  computed: {
+    tweets(): TweetType[] {
+      return this.$store.state.tweets.list
+    },
+  },
 })
 </script>
 

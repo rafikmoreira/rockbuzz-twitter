@@ -46,8 +46,8 @@ export default Vue.extend({
   .main-grid {
     display: grid;
     gap: 20px;
-    @media (min-width: 768px) {
-      grid-template-columns: 2fr 3fr;
+    @media (min-width: 720px) {
+      grid-template-columns: 1fr 5fr;
     }
     @media (min-width: 1024px) {
       grid-template-columns: 1.3fr 2.6fr 1.3fr;

@@ -17,8 +17,8 @@
 
 <script lang="ts">
 import Vue from 'vue'
-import Item from './Item.vue'
 import Title from '../Title.vue'
+import Item from './Item.vue'
 
 export default Vue.extend({
   name: 'TrendsComponent',

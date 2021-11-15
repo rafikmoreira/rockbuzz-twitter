@@ -1,7 +1,7 @@
 <template>
   <div class="atalho-wrapper flex">
     <i :class="iconClass" class="mr-2"></i>
-    <span class="hidden md:inline-block">{{ text }}</span>
+    <span class="hidden lg:inline-block" v-text="text"></span>
   </div>
 </template>
 

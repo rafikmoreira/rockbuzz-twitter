@@ -1,6 +1,6 @@
 <template>
   <li class="my-2">
-    <a href="#">#{{ text }}</a>
+    <a href="#" v-text="`#${text}`"></a>
   </li>
 </template>
 

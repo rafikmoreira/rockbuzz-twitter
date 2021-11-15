@@ -1,7 +1,7 @@
 <template>
   <div class="info">
-    <h3>Rafik Moreira</h3>
-    <h4>@rafikmoreira</h4>
+    <h3 v-text="user.name"></h3>
+    <h4 v-text="`@${user.user}`"></h4>
   </div>
 </template>
 
@@ -9,6 +9,11 @@
 import Vue from 'vue'
 export default Vue.extend({
   name: 'InformacoesPerfil',
+  computed: {
+    user() {
+      return this.$store.state.user.profile
+    },
+  },
 })
 </script>
 

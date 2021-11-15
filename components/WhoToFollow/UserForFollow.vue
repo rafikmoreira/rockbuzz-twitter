@@ -1,12 +1,14 @@
 <template>
   <div class="user-for-follow-wrapper">
-    <div class="flex content-between">
-      <div class="foto mr-3">
-        <foto :url="user.photoUrl" :user="user.name" />
-      </div>
-      <div>
-        <autor :data="user" />
-        <follow-button />
+    <div class="flex justify-between">
+      <div class="flex">
+        <div class="foto mr-3">
+          <foto :url="user.photoUrl" :user="user.name" />
+        </div>
+        <div>
+          <autor :data="user" :flex="true" />
+          <follow-button />
+        </div>
       </div>
       <remove />
     </div>

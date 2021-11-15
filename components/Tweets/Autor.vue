@@ -1,7 +1,7 @@
 <template>
-  <div class="autor-wrapper flex mt-5">
-    <h3 class="mr-2 autor">{{ data.name }}</h3>
-    <h4>{{ data.user }}</h4>
+  <div class="autor-wrapper mt-5" :class="`${flex ? '' : 'flex'}`">
+    <h3 class="mr-2 autor" v-text="data.name"></h3>
+    <h4 v-text="data.user"></h4>
   </div>
 </template>
 
@@ -13,6 +13,11 @@ export default Vue.extend({
     data: {
       type: Object,
       required: true,
+    },
+    flex: {
+      type: Boolean,
+      required: false,
+      default: false,
     },
   },
 })

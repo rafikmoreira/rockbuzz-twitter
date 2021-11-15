@@ -32,8 +32,14 @@ export default {
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
-  modules: ['@nuxtjs/style-resources'],
+  modules: ['@nuxtjs/style-resources', '@nuxtjs/toast'],
 
+  toast: {
+    position: 'top-right',
+    register: [
+      // Register custom toasts
+    ],
+  },
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
     postcss: {

@@ -5,15 +5,14 @@
       <div class="foto mr-4">
         <foto :url="data.user.photoUrl" :user="data.user.name" />
       </div>
-      <div>
+
+      <div style="flex: 1">
         <autor :data="data.user" />
-        <div class="text">
-          {{ data.text }}
-        </div>
+        <div class="text" v-text="data.text"></div>
         <div v-if="data.imagePostUrl" class="image mt-5">
           <img :src="data.imagePostUrl" />
         </div>
-        <atalhos />
+        <atalhos :tweetId="data.id" :favorited="data.favorite" />
       </div>
     </div>
   </div>

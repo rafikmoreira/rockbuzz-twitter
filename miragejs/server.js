@@ -60,6 +60,7 @@ function makeServer() {
             id: 1,
             text: 'Grandes mentes discutem ideias; mentes comuns discutem eventos; mentes pequenas discutem pessoas.',
             imagePostUrl: '',
+            favorite: false,
             user: {
               name: 'Eleanor Roosevelt',
               id: 1,
@@ -78,6 +79,7 @@ function makeServer() {
             text: 'Quando eu me atrevo a ser poderoso - para usar minha força no serviço da minha visão, então torna-se cada vez menos importante se eu tenho medo.',
             imagePostUrl:
               'https://images.pexels.com/photos/4348798/pexels-photo-4348798.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
+            favorite: false,
             user: {
               name: 'Audre Lorde',
               id: 2,
@@ -95,6 +97,7 @@ function makeServer() {
             id: 3,
             text: 'Inteligência é a capacidade de se adaptar à mudança.',
             imagePostUrl: '',
+            favorite: false,
             user: {
               name: 'Fernanda Maria',
               id: 3213123,
@@ -113,6 +116,7 @@ function makeServer() {
             text: 'Eu não quero chegar ao fim da minha vida e descobrir que eu vivi apenas o comprimento dela. Eu quero ter vivido a largura também',
             imagePostUrl:
               'https://images.pexels.com/photos/2076923/pexels-photo-2076923.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
+            favorite: false,
             user: {
               name: 'Diane Ackerman',
               id: 3213123,
@@ -130,6 +134,7 @@ function makeServer() {
             id: 5,
             text: 'Nenhum mentiroso tem uma memória suficientemente boa para ser um mentiroso de êxito.',
             imagePostUrl: '',
+            favorite: false,
             user: {
               name: 'Abraham Lincoln',
               id: 3213123,
@@ -148,6 +153,7 @@ function makeServer() {
             text: 'O homem que empenha todo o seu trabalho e imaginação em oferecer por um dólar o mais possível, em vez de menos, está condenado ao sucesso.',
             imagePostUrl:
               'https://images.pexels.com/photos/2877854/pexels-photo-2877854.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
+            favorite: false,
             user: {
               name: 'Henry Ford',
               id: 3213123,
@@ -166,6 +172,7 @@ function makeServer() {
             text: 'Pessoas raramente obtém sucesso a menos que se divirtam com o que fazem.',
             imagePostUrl:
               'https://images.pexels.com/photos/4577836/pexels-photo-4577836.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
+            favorite: false,
             user: {
               name: 'Dale Carnegie',
               id: 3213123,
@@ -183,6 +190,7 @@ function makeServer() {
             id: 8,
             text: '[Sobre o Xadrez] Jogo chinês que aumenta a capacidade de jogar xadrez.',
             imagePostUrl: '',
+            favorite: false,
             user: {
               name: 'Millôr Fernandes',
               id: 3213123,
@@ -200,6 +208,7 @@ function makeServer() {
             id: 9,
             text: 'A liderança é a capacidade de conseguir que as pessoas façam o que não querem fazer e gostem de o fazer.',
             imagePostUrl: '',
+            favorite: false,
             user: {
               name: 'Harry Truman',
               id: 3213123,
@@ -218,6 +227,7 @@ function makeServer() {
             text: 'É possível amar e não ser feliz, é possível ser feliz e não amar, mas amar e simultaneamente ser feliz, isso seria milagre.',
             imagePostUrl:
               'https://images.unsplash.com/photo-1498568715259-5c1dc96aa8e7?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1470&q=80',
+            favorite: false,
             user: {
               name: 'Honoré de Balzac',
               id: 3213123,

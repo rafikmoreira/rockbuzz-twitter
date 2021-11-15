@@ -19,7 +19,7 @@
       >
         <a href="#" class="md:flex items-center">
           <icon :icon-class="`${item.class} mr-2`" />
-          <span class="hidden md:inline-block">{{ item.text }}</span>
+          <span class="hidden md:inline-block" v-text="item.text"></span>
         </a>
       </li>
     </ul>
