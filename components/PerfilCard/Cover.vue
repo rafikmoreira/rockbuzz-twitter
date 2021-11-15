@@ -1,6 +1,6 @@
 <template>
   <div class="cover">
-    <img :src="profile.coverPhotoUrl" />
+    <img :src="profile.coverPhotoUrl" :style="`height: ${height}px`" />
   </div>
 </template>
 
@@ -9,6 +9,13 @@ import Vue from 'vue'
 
 export default Vue.extend({
   name: 'CoverPerfil',
+  props: {
+    height: {
+      required: false,
+      default: 150,
+      type: Number,
+    },
+  },
   data: () => {
     return {}
   },
@@ -24,7 +31,6 @@ export default Vue.extend({
 .cover {
   img {
     object-fit: cover;
-    height: 150px;
     width: 100%;
     border-radius: 8px 8px 0 0;
   }

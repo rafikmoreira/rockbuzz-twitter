@@ -21,6 +21,7 @@ export default Vue.extend({
 <style lang="scss" scoped>
 a {
   transition: 0.4s;
+  color: #1da1f2;
   &:hover {
     color: #222;
   }

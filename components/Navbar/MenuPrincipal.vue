@@ -17,10 +17,10 @@
         :key="item.id"
         class="mx-1 md:mx-0 md:mr-5"
       >
-        <a href="#" class="md:flex items-center">
+        <n-link :to="item.link" class="md:flex items-center">
           <icon :icon-class="`${item.class} mr-2`" />
           <span class="hidden md:inline-block" v-text="item.text"></span>
-        </a>
+        </n-link>
       </li>
     </ul>
   </div>
@@ -35,10 +35,15 @@ export default Vue.extend({
   data: () => {
     return {
       menuPrincipal: [
-        { id: 1, class: 'ri-home-2-line', text: 'Home' },
-        { id: 2, class: 'ri-notification-line', text: 'Notifications' },
-        { id: 3, class: 'ri-hashtag', text: 'Discover' },
-        { id: 4, class: 'ri-user-line', text: 'Me' },
+        { id: 1, link: '/', class: 'ri-home-2-line', text: 'Home' },
+        {
+          id: 2,
+          link: '/',
+          class: 'ri-notification-line',
+          text: 'Notifications',
+        },
+        { id: 3, link: '/', class: 'ri-hashtag', text: 'Discover' },
+        { id: 4, link: '/profile', class: 'ri-user-line', text: 'Me' },
       ],
     }
   },

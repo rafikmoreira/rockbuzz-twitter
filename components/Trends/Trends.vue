@@ -29,8 +29,5 @@ export default Vue.extend({
 <style lang="scss" scoped>
 .trends-wrapper {
   background-color: white;
-  a {
-    color: #1da1f2;
-  }
 }
 </style>

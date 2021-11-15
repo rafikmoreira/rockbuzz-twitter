@@ -1,6 +1,6 @@
 <template>
   <div class="perfil-card borda relative">
-    <cover />
+    <cover :height="height" />
     <div class="px-2 pb-2 relative">
       <perfil />
       <hr class="mt-2" />
@@ -18,6 +18,13 @@ import EscreverTwitter from './EscreverTwitter.vue'
 export default Vue.extend({
   name: 'PerfilCard',
   components: { Cover, Perfil, EscreverTwitter },
+  props: {
+    height: {
+      required: false,
+      default: 150,
+      type: Number,
+    },
+  },
 })
 </script>
 
