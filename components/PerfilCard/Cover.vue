@@ -7,8 +7,13 @@
 <script lang="ts">
 import Vue from 'vue'
 
+type Profile = {
+  coverPhotoUrl: String
+}
+
 export default Vue.extend({
   name: 'CoverPerfil',
+
   props: {
     height: {
       required: false,
@@ -16,11 +21,12 @@ export default Vue.extend({
       type: Number,
     },
   },
+
   data: () => {
     return {}
   },
   computed: {
-    profile() {
+    profile(): Profile {
       return this.$store.state.user.profile
     },
   },
