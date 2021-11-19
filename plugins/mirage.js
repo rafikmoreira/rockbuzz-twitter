@@ -93,7 +93,7 @@ if (process.env.NODE_ENV === 'development') {
         return schema.db.tweets
       })
 
-      this.patch('/tweets/:id', (schema, request) => {
+      this.patch('/tweets/favorite/:id', (schema, request) => {
         const { id } = request.params
         const tweet = schema.db.tweets.find(id)
         let favorite = false
