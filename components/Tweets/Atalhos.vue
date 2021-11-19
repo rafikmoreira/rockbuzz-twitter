@@ -44,7 +44,7 @@ export default Vue.extend({
   methods: {
     favorite(id: String) {
       try {
-        this.$axios.patch(`/tweets/${id}`)
+        this.$axios.patch(`/tweets/favorite/${id}`)
         this.$nuxt.$emit('reloadAllTweets')
       } catch (e) {
         console.log('Erro')
