@@ -1,6 +1,6 @@
 <template>
   <div class="cover">
-    <img :src="profile.coverPhotoUrl" :style="`height: ${height}px`" />
+    <img :src="profile['cover-photo-url']" :style="`height: ${height}px`" />
   </div>
 </template>
 
@@ -8,7 +8,7 @@
 import Vue from 'vue'
 
 type Profile = {
-  coverPhotoUrl: String
+  ['cover-photo-url']: String
 }
 
 export default Vue.extend({

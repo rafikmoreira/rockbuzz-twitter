@@ -4,24 +4,20 @@
 
     <ul class="flex">
       <li>
-        <atalho iconClass="ri-reply-line" text="Reply" />
+        <atalho icon-class="ri-reply-line" text="Reply" />
       </li>
       <li class="ml-4">
-        <atalho iconClass="ri-share-line" text="Retweet" />
+        <atalho icon-class="ri-share-line" text="Retweet" />
       </li>
       <li
         class="ml-4"
         :class="favorited ? 'favorited' : ''"
-        @click="
-          () => {
-            favorite(tweetId)
-          }
-        "
+        @click="favorite(tweetId)"
       >
-        <atalho iconClass="ri-star-fill" text="Favorite" />
+        <atalho icon-class="ri-star-fill" text="Favorite" />
       </li>
       <li class="ml-4">
-        <atalho iconClass="ri-more-line" text="More" />
+        <atalho icon-class="ri-more-line" text="More" />
       </li>
     </ul>
   </div>
@@ -36,8 +32,8 @@ export default Vue.extend({
   props: {
     tweetId: {
       required: true,
-      type: Number,
-      default: 0,
+      type: String,
+      default: '0',
     },
     favorited: {
       required: false,
@@ -46,8 +42,13 @@ export default Vue.extend({
     },
   },
   methods: {
-    favorite(id: Number) {
-      this.$store.commit('tweets/favorite', id)
+    favorite(id: String) {
+      try {
+        this.$axios.patch(`/tweets/${id}`)
+        this.$nuxt.$emit('reloadAllTweets')
+      } catch (e) {
+        console.log('Erro')
+      }
     },
   },
 })

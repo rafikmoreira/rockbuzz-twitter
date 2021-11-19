@@ -3,11 +3,11 @@
     <hr />
     <div class="tweet mt-3">
       <div class="foto mr-4">
-        <foto :url="data.user.photoUrl" :user="data.user.name" />
+        <!-- <foto :url="data.user?.photoUrl" :user="data.user.name" /> -->
       </div>
 
       <div style="flex: 1">
-        <autor :data="data.user" />
+        <!-- <autor :data="data.user" /> -->
         <div class="text" v-text="data.text"></div>
         <div v-if="data.imagePostUrl" class="image mt-5">
           <img :src="data.imagePostUrl" />

@@ -35,19 +35,28 @@ type TweetType = {
 export default Vue.extend({
   name: 'TweetsComponent',
   components: { Title, Tweet },
-  async fetch() {
-    const payload = await fetch(
-      'http://localhost:3000/api/last10TweetsFollowing'
-    ).then((r) => r.json())
-
-    this.$store.commit('tweets/loadTweets', { payload })
+  data: () => {
+    return {
+      tweets: [] as TweetType[],
+    }
   },
-  fetchOnServer: false,
-  computed: {
-    tweets(): TweetType[] {
-      return this.$store.state.tweets.list
+  async fetch() {
+    await this.getTweets()
+  },
+  mounted() {
+    this.$nuxt.$on('reloadAllTweets', async () => {
+      await this.getTweets()
+    })
+  },
+  methods: {
+    async getTweets() {
+      const { data } = await this.$axios.get('/tweets?limit=10&offset=0')
+      console.log(data)
+      this.tweets = data
     },
   },
+
+  fetchOnServer: false,
 })
 </script>
 

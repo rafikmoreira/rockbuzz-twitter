@@ -10,7 +10,7 @@
           <follow-button />
         </div>
       </div>
-      <remove />
+      <remove :user="user" />
     </div>
   </div>
 </template>
@@ -24,7 +24,9 @@ import Remove from './Remove.vue'
 export default Vue.extend({
   name: 'UserForFollow',
   components: { Foto, Autor, FollowButton, Remove },
-  props: { user: { type: Object, required: true } },
+  props: {
+    user: { type: Object, required: true },
+  },
 })
 </script>
 

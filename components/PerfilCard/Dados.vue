@@ -1,6 +1,6 @@
 <template>
   <div class="dados flex">
-    <foto :url="profile.photoUrl" :user="profile.name" />
+    <foto :url="profile['photo-url']" :user="profile.name" />
     <informacoes />
   </div>
 </template>

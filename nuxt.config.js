@@ -32,7 +32,7 @@ export default {
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
-  modules: ['@nuxtjs/style-resources', '@nuxtjs/toast'],
+  modules: ['@nuxtjs/style-resources', '@nuxtjs/toast', '@nuxtjs/axios'],
 
   toast: {
     position: 'top-right',
@@ -56,5 +56,9 @@ export default {
       icons: [],
       description: 'Uma cópia do Twitter BR - Desafio front-end',
     },
+  },
+
+  axios: {
+    baseUrl: 'http://localhost:3000',
   },
 }

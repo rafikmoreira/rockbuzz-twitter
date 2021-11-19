@@ -1,6 +1,6 @@
 <template>
   <div class="remove-wrapper pl-4">
-    <i class="ri-close-line"></i>
+    <i class="ri-close-line" @click="remove(user.id)"></i>
   </div>
 </template>
 
@@ -8,6 +8,17 @@
 import Vue from 'vue'
 export default Vue.extend({
   name: 'RemoveComponent',
+  props: {
+    user: { type: Object, required: true },
+  },
+  methods: {
+    async remove(id: String) {
+      try {
+        await this.$axios.delete(`/user/${id}`)
+        this.$nuxt.$emit('userFollowReload')
+      } catch (e) {}
+    },
+  },
 })
 </script>
 

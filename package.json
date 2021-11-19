@@ -11,6 +11,7 @@
     "lint": "yarn lint:js"
   },
   "dependencies": {
+    "@nuxtjs/axios": "^5.13.6",
     "@nuxtjs/toast": "^3.3.1",
     "@types/axios": "^0.14.0",
     "axios": "^0.24.0",
@@ -29,11 +30,13 @@
     "@nuxtjs/pwa": "^3.3.5",
     "@nuxtjs/style-resources": "^1.2.1",
     "@nuxtjs/tailwindcss": "^4.2.1",
+    "@types/faker": "^5.5.9",
     "autoprefixer": "^10.4.0",
     "eslint": "^7.29.0",
     "eslint-config-prettier": "^8.3.0",
     "eslint-plugin-nuxt": "^2.0.0",
     "eslint-plugin-vue": "^7.12.1",
+    "faker": "^5.5.3",
     "fibers": "^5.0.0",
     "miragejs": "^0.1.42",
     "postcss": "^8.3.11",

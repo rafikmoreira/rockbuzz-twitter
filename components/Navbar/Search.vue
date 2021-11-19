@@ -1,6 +1,6 @@
 <template>
   <div>
-    <icon iconClass="ri-search-line md:hidden" />
+    <icon icon-class="ri-search-line md:hidden" />
     <div class="hidden search-wrapper md:flex p-2">
       <i class="ri-search-line mr-2"></i>
       <form id="search">

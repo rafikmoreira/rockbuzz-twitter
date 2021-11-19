@@ -34,11 +34,24 @@ export default Vue.extend({
   data: () => {
     return { users: [] as User[] }
   },
+
   async fetch() {
-    this.users = await fetch('http://localhost:3000/api/whoToFollow').then(
-      (res) => res.json()
-    )
+    await this.getUsers()
   },
+  mounted() {
+    this.$nuxt.$on('userFollowReload', async () => {
+      await this.getUsers()
+    })
+  },
+  methods: {
+    async getUsers() {
+      const { data } = await this.$axios.get(
+        '/user/suggestion?offset=0&limit=3'
+      )
+      this.users = data
+    },
+  },
+
   fetchOnServer: false,
 })
 </script>

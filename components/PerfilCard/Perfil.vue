@@ -20,11 +20,22 @@ export default Vue.extend({
   data: () => {
     return {}
   },
+  async fetch() {
+    await this.getProfileInfo()
+  },
   computed: {
     profile() {
       return this.$store.state.user.profile
     },
   },
+  methods: {
+    async getProfileInfo() {
+      const response = await this.$axios.get('/user/profile')
+      this.$store.commit('user/setData', response.data.data.attributes)
+    },
+  },
+
+  fetchOnServer: false,
 })
 </script>
 

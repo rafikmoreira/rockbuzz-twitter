@@ -10,7 +10,4 @@ import PerfilCard from './PerfilCard.vue'
 export default Vue.extend({ components: { PerfilCard } })
 </script>
 
-<style lang="scss" scoped>
-.perfil-card-wrapper {
-}
-</style>
+<style lang="scss" scoped></style>

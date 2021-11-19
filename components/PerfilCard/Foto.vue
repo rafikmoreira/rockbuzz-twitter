@@ -12,11 +12,13 @@ export default Vue.extend({
   props: {
     url: {
       type: String,
-      required: true,
+      required: false,
+      default: '',
     },
     user: {
       type: String,
-      required: true,
+      required: false,
+      default: 'Not defined',
     },
   },
   data: () => {
