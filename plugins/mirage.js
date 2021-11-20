@@ -90,12 +90,13 @@ if (process.env.NODE_ENV === 'development') {
       })
 
       this.get('/tweets', (schema) => {
-        return schema.db.tweets
+        console.log('teste', schema.tweets.all().models)
+        return schema.tweets.all().models
       })
 
       this.patch('/tweets/favorite/:id', (schema, request) => {
         const { id } = request.params
-        const tweet = schema.db.tweets.find(id)
+        const tweet = schema.tweets.find(id)
         let favorite = false
         if (!tweet.favorite) {
           favorite = true
@@ -125,7 +126,7 @@ if (process.env.NODE_ENV === 'development') {
 
       this.delete('/user/:id', (schema, request) => {
         const { id } = request.params
-        const user = schema.db.users.find(id)
+        const user = schema.users.find(id)
         return user.destroy()
       })
     },
